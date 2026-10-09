@@ -1,0 +1,3 @@
+crewai
+gradio
+python-dotenv

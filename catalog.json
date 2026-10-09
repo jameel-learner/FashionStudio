@@ -1,0 +1,13 @@
+{
+  "_note": "Names and prices come from the Fouzia Design Studio storefront. Category, colour and occasion tags are added for the demo so the crew has something to reason over. Edit freely.",
+  "products": [
+    {"id": "P1", "name": "Ivory Cotton Short Kurti", "price": 1200, "category": "kurti", "colour": "ivory", "occasions": ["casual", "daily", "office", "college", "summer"], "vibe": "light, breathable, simple"},
+    {"id": "P2", "name": "Maroon Velvet Kurta", "price": 5200, "category": "kurta", "colour": "maroon", "occasions": ["wedding", "festive", "reception", "winter", "evening"], "vibe": "rich, heavy, formal"},
+    {"id": "P3", "name": "Blush Wrap Midi Dress", "price": 2800, "category": "dress", "colour": "blush pink", "occasions": ["party", "brunch", "engagement", "mehendi", "date", "evening"], "vibe": "soft, pastel, feminine"},
+    {"id": "P4", "name": "Black Tailored Jumpsuit", "price": 3600, "category": "jumpsuit", "colour": "black", "occasions": ["office", "party", "evening", "dinner", "cocktail"], "vibe": "sharp, modern, polished"},
+    {"id": "P5", "name": "Floral Co-ord Set", "price": 2400, "category": "co-ord", "colour": "floral multicolour", "occasions": ["casual", "brunch", "travel", "summer", "day out"], "vibe": "playful, easy, light"},
+    {"id": "P6", "name": "Beige Trench Coat", "price": 4800, "category": "outerwear", "colour": "beige", "occasions": ["work", "travel", "winter", "rain", "layering"], "vibe": "classic, structured, neutral"},
+    {"id": "P7", "name": "Handcrafted Jhumka Earrings", "price": 1500, "category": "accessory", "colour": "gold", "occasions": ["festive", "wedding", "mehendi", "engagement", "ethnic", "puja"], "vibe": "traditional, handcrafted"},
+    {"id": "P8", "name": "Embroidered Potli Bag", "price": 1300, "category": "accessory", "colour": "multicolour embroidery", "occasions": ["festive", "wedding", "mehendi", "engagement", "ethnic", "puja"], "vibe": "traditional, embroidered"}
+  ]
+}
