@@ -29,7 +29,7 @@ def _score(product, words):
 def search_catalog(query: str, category: str = "all", max_price: int = 0) -> str:
     """Search the Fouzia Design Studio catalog.
     query: space-separated keywords such as occasion, colour or vibe (e.g. "mehendi pastel soft").
-    category: one of kurti, kurta, dress, jumpsuit, co-ord, outerwear, accessory, or "all".
+    category: a category name from list_categories, or "all".
     max_price: maximum price in rupees for a single item; 0 means no limit.
     Returns a JSON list of matching products with id, name, price, category, colour and vibe."""
     words = [w for w in query.lower().replace(",", " ").split() if w]
@@ -47,6 +47,21 @@ def search_catalog(query: str, category: str = "all", max_price: int = 0) -> str
     out = [
         {k: p[k] for k in ("id", "name", "price", "category", "colour", "vibe")}
         for _, p in results
+    ]
+    return json.dumps(out, ensure_ascii=False)
+
+
+@tool("list_categories")
+def list_categories() -> str:
+    """List every category in the catalog with how many items it has and a few example item names.
+    Use it to understand what the store sells before searching.
+    Returns a JSON list of {category, count, examples}."""
+    by_category = {}
+    for p in load_catalog():
+        by_category.setdefault(p["category"], []).append(p["name"])
+    out = [
+        {"category": c, "count": len(names), "examples": names[:3]}
+        for c, names in by_category.items()
     ]
     return json.dumps(out, ensure_ascii=False)
 
